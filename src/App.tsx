@@ -9,12 +9,14 @@ import { Blog } from './components/Blog';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { GridBackground } from './components/GridBackground';
+import { InfinitePawTrail } from './components/ui/infinite-paw-trail';
 
 export default function App() {
   return (
     <div className="relative min-h-screen bg-[#0a0a0f]">
       <GridBackground />
       <Header />
+      <InfinitePawTrail />
       <main>
         <Hero />
         <About />
