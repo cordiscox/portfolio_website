@@ -35,7 +35,7 @@ export function Header() {
       <div className="mx-auto max-w-6xl w-full px-6 py-5">
         <div className="flex items-center justify-between gap-6">
           <a href="#home" className="text-2xl tracking-tight text-[#00ff94] font-bold relative group">
-            <span className="relative z-10">Joaquin Cordisco</span>
+            <span className="relative z-10">JMC</span>
             <span className="absolute inset-0 bg-[#00ff94] blur-xl opacity-0 group-hover:opacity-30 transition-opacity" />
           </a>
 

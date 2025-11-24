@@ -50,7 +50,7 @@ export const InfinitePawTrail = () => {
             ease: "easeOut",
             // MEJORA 3: Delay más rápido.
             // Antes empezaba en 1.0s, ahora en 0.2s. La secuencia es más ágil.
-            delay: paw.id < 7 ? 0.2 + (paw.id * 0.3) : 0 
+            delay: paw.id < 9 ? 0.2 + (paw.id * 0.3) : 0 
           }}
           className="absolute"
           style={{

@@ -1,37 +1,38 @@
 import { motion } from 'motion/react';
-import { Code2, Heart, Zap, Award } from 'lucide-react';
+import { Code2, Heart, Zap, Award, ShieldCheck, Terminal, Cloud, Server, Activity, Brain } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import Me from '../../src/img/me.png';
 
 export function About() {
   const highlights = [
     {
-      icon: Code2,
-      title: 'Desarrollo Web',
-      description: 'Apps modernas y escalables',
-      color: '#ff8c42',
+      title: "DevOps & Cloud",
+      description: "AWS, Docker, Kubernetes & Terraform",
+      icon: Cloud,
+      color: "#4ecdc4" // Cyan/Turquoise
     },
     {
-      icon: Heart,
-      title: 'Pasión Canina',
-      description: 'Amante de los perros',
-      color: '#4ecdc4',
+      title: "Automatización",
+      description: "Scripting Python, Bash & n8n",
+      icon: Terminal,
+      color: "#ff8c42" // Orange
     },
     {
-      icon: Zap,
-      title: 'Innovación',
-      description: 'Soluciones creativas',
-      color: '#95e1d3',
+      title: "Development & IA",
+      description: "Python, LangChain, RAG & Prompt Engineering",
+      icon: Brain,
+      color: "#8b5cf6" // Violeta para IA
     },
     {
-      icon: Award,
-      title: 'Experiencia',
-      description: 'Proyectos exitosos',
-      color: '#ff6b9d',
+      title: "Monitoreo & Observabilidad",
+      description: "Grafana, Prometheus & Logging",
+      icon: Activity,
+      color: "#ff8c42" // Reuse Orange
     },
   ];
 
   return (
-    <section id="about" className="relative py-32 px-6">
+    <section id="about" className="relative py-20 px-6">
       <div className="mx-auto max-w-6xl w-full px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,8 +55,8 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=800&h=800&fit=crop"
-              alt="Adiestramiento canino profesional"
+              src={Me}
+              alt="Joaquin Cordisco"
               className="rounded-3xl shadow-2xl shadow-[#ff8c42]/20 w-full border-4 border-[#ff8c42]/20"
             />
           </motion.div>
@@ -67,49 +68,60 @@ export function About() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
+            {/* Párrafo 1: Introducción y Rol Principal */}
             <p className="text-xl text-zinc-300 leading-relaxed">
-              ¡Hola! Soy un desarrollador web especializado en crear{' '}
-              <span className="text-[#ff8c42]">plataformas digitales para el mundo del adiestramiento canino</span>.
-              Mi pasión por la tecnología y el amor por los perros se unen en cada proyecto.
+              Más que código, busco soluciones. Soy un Analista de Sistemas especializado en{' '}
+              <span className="text-[#ff8c42]">Automatización y DevOps</span> {' '}
+              con una misión clara: transformar tareas repetitivas en flujos de trabajo eficientes.
             </p>
 
+            {/* Párrafo 2: Experiencia y Enfoque */}
             <p className="text-xl text-zinc-300 leading-relaxed">
-              He trabajado con entrenadores profesionales, veterinarios y dueños de mascotas para crear{' '}
-              <span className="text-[#4ecdc4]">herramientas que simplifican el aprendizaje</span> y fortalecen 
-              el vínculo entre humanos y sus compañeros caninos.
+              Cuento con una base sólida de más de 7 años asegurando la continuidad de negocio en industrias exigentes 
+              (Automotriz/Industrial), donde la precisión es innegociable. Esa experiencia gestionando cientos de instancias 
+              y procesos batch  es lo que hoy aplico al mundo Cloud.
             </p>
 
+            {/* Párrafo 3: Objetivo Profesional */}
             <p className="text-xl text-zinc-300 leading-relaxed">
-              Desde apps de seguimiento de entrenamiento hasta plataformas de gestión de clases grupales, 
-              mi objetivo es hacer que el{' '}
-              <span className="text-[#95e1d3]">adiestramiento sea accesible y efectivo</span> para todos.
+              Actualmente, integro{' '}
+              <span className="text-[#95e1d3]">Infraestructura como Código, IA y Observabilidad</span> para construir sistemas que 
+              no solo funcionan, sino que evolucionan. Me motiva automatizar 'lo aburrido' para que las personas 
+              puedan dedicar su talento a lo extraordinario.
             </p>
-
-            <div className="grid grid-cols-2 gap-4 pt-6">
-              {highlights.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative group"
-                >
-                  <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-zinc-700 transition-all backdrop-blur-sm">
-                    <div
-                      className="w-12 h-12 rounded-xl mb-3 flex items-center justify-center"
-                      style={{ backgroundColor: `${item.color}20` }}
-                    >
-                      <item.icon size={24} style={{ color: item.color }} />
-                    </div>
-                    <h4 className="text-white mb-1">{item.title}</h4>
-                    <p className="text-sm text-zinc-400">{item.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
         </div>
+
+        {/* Grid de Highlights (Skills) */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-10 mt-10"
+        >
+          {highlights.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative group"
+            >
+              <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-zinc-700 transition-all backdrop-blur-sm h-full">
+                <div
+                  className="w-12 h-12 rounded-xl mb-3 flex items-center justify-center"
+                  style={{ backgroundColor: `${item.color}20` }}
+                >
+                  <item.icon size={24} style={{ color: item.color }} />
+                </div>
+                <h4 className="text-white font-semibold mb-1">{item.title}</h4>
+                <p className="text-sm text-zinc-400">{item.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

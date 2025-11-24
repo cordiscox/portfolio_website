@@ -42,7 +42,7 @@ const caseStudies = [
 
 export function CaseStudies() {
   return (
-    <section id="case-studies" className="relative py-32 px-6">
+    <section id="case-studies" className="relative py-20 px-6">
       <div className="mx-auto max-w-6xl w-full px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

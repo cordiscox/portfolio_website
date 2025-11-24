@@ -36,7 +36,7 @@ const specializations = [
 
 export function Skills() {
   return (
-    <section id="skills" className="relative py-32 px-6">
+    <section id="skills" className="relative py-20 px-6">
       <div className="mx-auto max-w-6xl w-full px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

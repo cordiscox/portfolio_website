@@ -1,10 +1,11 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, Heart, Terminal } from 'lucide-react';
 import { PawIcon } from './ui/paw-icon';
 
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
+      
       <div className="mx-auto max-w-6xl w-full relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
@@ -12,15 +13,15 @@ export function Hero() {
           transition={{ duration: 1 }}
           className="text-center"
         >
+          {/* Badge o Etiqueta superior */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-8 inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-[#ff8c42]/20 to-[#4ecdc4]/20 border border-[#ff8c42]/30 rounded-full backdrop-blur-sm"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/50 mb-8 backdrop-blur-sm"
           >
-            <Heart size={16} className="text-[#ff8c42] fill-[#ff8c42]" />
-            <span className="text-[#ff8c42] tracking-wide">Tecnología + Adiestramiento Canino</span>
-            <PawIcon size={16} className="text-[#ff8c42]" />
+            <Terminal size={14} className="text-[#4ecdc4]" />
+            <span className="text-xs font-medium text-zinc-400"> DevOps & Automatización | Soporte de Aplicaciones </span>
           </motion.div>
 
           <motion.h1
@@ -44,9 +45,10 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-3xl text-zinc-400 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
-            Desarrollo{' '}
-            <span className="text-[#ff8c42]">soluciones tecnológicas innovadoras</span>{' '}
-            para el mundo del adiestramiento canino, conectando entrenadores con dueños de mascotas.
+            Transformo operaciones complejas en flujos eficientes. Unifico la estabilidad del{' '}
+            <span className="text-[#ff8c42] font-semibold">Soporte Crítico</span> con la agilidad de{' '}
+            <span className="text-[#4ecdc4] font-semibold">DevOps</span> y la{' '}
+            <span className="text-[#95e1d3] font-semibold">Automatización</span>.
           </motion.p>
 
           <motion.div

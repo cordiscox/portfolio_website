@@ -1,15 +1,5 @@
 import { Heart, ArrowUp } from 'lucide-react';
-
-const PawIcon = ({ className = "" }: { className?: string }) => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M12 8C10.9 8 10 7.1 10 6C10 4.9 10.9 4 12 4C13.1 4 14 4.9 14 6C14 7.1 13.1 8 12 8Z" />
-    <path d="M8 10C6.9 10 6 9.1 6 8C6 6.9 6.9 6 8 6C9.1 6 10 6.9 10 8C10 9.1 9.1 10 8 10Z" />
-    <path d="M16 10C14.9 10 14 9.1 14 8C14 6.9 14.9 6 16 6C17.1 6 18 6.9 18 8C18 9.1 17.1 10 16 10Z" />
-    <path d="M6 14C4.9 14 4 13.1 4 12C4 10.9 4.9 10 6 10C7.1 10 8 10.9 8 12C8 13.1 7.1 14 6 14Z" />
-    <path d="M18 14C16.9 14 16 13.1 16 12C16 10.9 16.9 10 18 10C19.1 10 20 10.9 20 12C20 13.1 19.1 14 18 14Z" />
-    <path d="M12 20C9.8 20 8 18.2 8 16C8 13.8 9.8 12 12 12C14.2 12 16 13.8 16 16C16 18.2 14.2 20 12 20Z" />
-  </svg>
-);
+import { PawIcon } from './ui/paw-icon';
 
 export function Footer() {
   const scrollToTop = () => {
