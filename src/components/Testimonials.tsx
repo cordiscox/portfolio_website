@@ -15,21 +15,20 @@ const testimonials = [
     },
   },
   {
-    name: 'Carlos Rodríguez',
-    role: 'Veterinario y Director de K9 Center',
-    content:
-      'Trabajar con Joaquin fue excepcional. No solo entiende de tecnología, sino que realmente comprende las necesidades de los profesionales caninos. La app que creó para nosotros es intuitiva, potente y nuestros clientes la adoran.',
+    name: 'Luciano Mazzoni',
+    role: 'Oracle DBA',
+    content: 'Tuve la oportunidad de trabajar con Joaquin Cordisco y puedo asegurar que es un profesional altamente orientado a la automatización, con un excelente dominio de scripting y un enfoque muy sólido en la resolución de problemas. Su capacidad para identificar oportunidades de mejora, automatizar tareas repetitivas y simplificar procesos complejos marcó una diferencia real en el equipo...',
     rating: 5,
-    avatar: '🐕‍🦺',
+    avatar: '👌',
     gradient: 'from-[#4ecdc4] to-[#38b2ac]',
   },
   {
-    name: 'Ana Silva',
-    role: 'Dueña de Golden Retriever',
+    name: 'Agustín Zapata',
+    role: 'SAP ABAP Developer',
     content:
-      'Como dueña primeriza de un perro, la app de entrenamiento que desarrolló me dio la confianza que necesitaba. Las lecciones paso a paso y los videos son clarísimos. Mi perro Luna ahora sabe 15 comandos gracias a esta herramienta.',
+      'Joaquin es gran compañero, altamente resolutivo y capaz de realizar las tareas que el puesto requiere e ir más allá, siempre pensando en ayudar a los demas y en conseguir la solución mas escalable posible al tema presente.',
     rating: 5,
-    avatar: '🐾',
+    avatar: '👊',
     gradient: 'from-[#95e1d3] to-[#6dd5c3]',
   },
 ];
