@@ -1,0 +1,19 @@
+{
+  "name": "Joaquin Cordisco | DevOps y Automatización",
+  "short_name": "Cordisco DevOps",
+  "description": "Portafolio profesional de Joaquin Cordisco: DevOps, automatización y soporte crítico.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "icons": [
+    {
+      "src": "/logo_js.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}

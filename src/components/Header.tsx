@@ -21,6 +21,7 @@ export function Header() {
     { label: 'Sobre mí', href: '#about' },
     { label: 'Proyectos', href: '#projects' },
     { label: 'Skills', href: '#skills' },
+    { label: 'Testimonios', href: '#testimonials' },
     { label: 'Contacto', href: '#contact' },
   ];
 

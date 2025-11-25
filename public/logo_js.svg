@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="256" height="256">
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&amp;display=swap');
+                    .text-style {
+                        font-family: 'Oswald', 'Impact', sans-serif;
+                        font-weight: 700;
+                        font-size: 280px;
+                        fill: black;
+                    }
+                </style>
+                
+                <!-- Background/Border Rectangle -->
+                <!-- We inset x and y slightly to account for the stroke width so it doesn't clip -->
+                <rect x="25" y="25" width="462" height="462" rx="80" ry="80" fill="white" stroke="black" stroke-width="25"/>
+                
+                <!-- Text Group -->
+                <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" class="text-style">JC</text>
+            </svg>

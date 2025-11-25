@@ -1,12 +1,12 @@
 import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowUpRight, Lock } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import SpeechImg from '../../src/assets/speechtotext.png';
-import AHKImg from '../../src/assets/autohotkeyimg.png';
-import UrlImg from '../../src/assets/urlshortener.png';
-import BasgImg from '../../src/assets/bashscripts.png';
-import dogTrainingImg from '../../src/assets/dogtraining.png';
-import ChatbotImg from '../../src/assets/chatbot.png';
+import SpeechImg from '../../src/assets/speechtotext.jpg';
+import AHKImg from '../../src/assets/autohotkeyimg.jpg';
+import UrlImg from '../../src/assets/urlshortener.jpg';
+import BasgImg from '../../src/assets/bashscripts.jpg';
+import dogTrainingImg from '../../src/assets/dogtraining.jpg';
+import ChatbotImg from '../../src/assets/chatbot.jpg';
 
 type Project = {
   title: string;
