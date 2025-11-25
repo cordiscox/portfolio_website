@@ -6,6 +6,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const hasSolidBackground = isScrolled || isMobileMenuOpen;
+  const cvFileUrl = 'CV_JMCordisco.pdf';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +60,7 @@ export function Header() {
                 </motion.a>
               ))}
               <a
-                href="/CV_JMCordisco.pdf"
+                href={cvFileUrl}
                 download
                 className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-[#ff8c42] text-white font-semibold shadow-lg shadow-[#ff8c42]/30 hover:shadow-[#ff8c42]/50 hover:-translate-y-0.5 transition-all"
               >
@@ -70,7 +71,7 @@ export function Header() {
 
             <div className="flex items-center gap-3 md:hidden">
               <a
-                href="/CV_JMCordisco.pdf"
+                href={cvFileUrl}
                 download
                 className="inline-flex h-10 w-10 flex-col items-center justify-center rounded-lg bg-gradient-to-r from-[#ff8c42] to-[#e67a35] text-white text-[0.65rem] font-semibold shadow-lg shadow-[#ff8c42]/25 hover:shadow-[#ff8c42]/40 transition-all"
                 aria-label="Descargar CV"
@@ -108,7 +109,7 @@ export function Header() {
               </a>
             ))}
             <a
-              href="/CV_JMCordisco.pdf"
+              href={cvFileUrl}
               download
               onClick={() => setIsMobileMenuOpen(false)}
               className="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-gradient-to-r from-[#ff8c42] to-[#e67a35] text-white font-semibold border border-[#ff8c42]/40 shadow-lg shadow-[#ff8c42]/25"
