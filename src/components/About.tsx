@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Code2, Heart, Zap, Award, ShieldCheck, Terminal, Cloud, Server, Activity, Brain } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import Me from '../../src/img/me.png';
+import Me from '../../src/assets/me.png';
 
 export function About() {
   const highlights = [

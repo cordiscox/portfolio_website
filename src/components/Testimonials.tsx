@@ -1,15 +1,18 @@
 import { motion } from 'motion/react';
-import { Star } from 'lucide-react';
+import { Download, Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Laura Martínez',
-    role: 'Entrenadora Canina Certificada',
-    content:
-      'La plataforma que Joaquin desarrolló para mi academia transformó completamente mi negocio. Ahora puedo gestionar todos mis clientes, enviar planes personalizados y hacer seguimiento del progreso de cada perro. ¡Mis ingresos aumentaron un 150%!',
+    name: 'Eduardo  Bellazzi',
+    role: 'Líder',
+    content: 'Este reconocimiento para Joaquin es por su esfuerzo y excelente desempeño con el cliente en todos los trabajos referidos a proyectos criticos de PLPR (LUX & APS), reconociendo su productividad y compromiso para con el equipo .- Felicitaciones y Buen trabajo',
     rating: 5,
-    avatar: '🦮',
+    avatar: '🏆',
     gradient: 'from-[#ff8c42] to-[#e67a35]',
+    attachment: {
+      label: 'Diploma Accolade 2023 Q2',
+      file: '/Diplomas Accolade 2023 Q2. Joaquin Miguel Cordisco.pdf',
+    },
   },
   {
     name: 'Carlos Rodríguez',
@@ -42,12 +45,16 @@ export function Testimonials() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-7xl mb-6 text-white">
-            Lo que dicen <span className="text-[#ff8c42]">los clientes</span>
+          
+          <h2 className="text-5xl md:text-7xl mb-6 text-white font-bold">
+            Feedback & <span className="text-[#ff8c42]">Trayectoria</span>
           </h2>
+          
           <div className="w-24 h-1 bg-gradient-to-r from-[#ff8c42] to-[#4ecdc4] mx-auto rounded-full mb-6" />
+          
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Testimonios reales de entrenadores, veterinarios y dueños de mascotas que confían en mis soluciones.
+            Lo que dicen mis colegas y compañeros de equipo en 
+            <span className="text-[#0077b5] font-semibold"> LinkedIn</span>.
           </p>
         </motion.div>
 
@@ -82,6 +89,17 @@ export function Testimonials() {
                     "{testimonial.content}"
                   </p>
 
+                  {testimonial.attachment && (
+                    <a
+                      href={testimonial.attachment.file}
+                      download
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-[#ff8c42]/40 text-[#ff8c42] text-sm font-medium hover:bg-[#ff8c42]/10 transition-colors mb-6"
+                    >
+                      <Download size={16} />
+                      Descargar {testimonial.attachment.label}
+                    </a>
+                  )}
+
                   {/* Author */}
                   <div className="pt-4 border-t border-zinc-800">
                     <p className="text-white mb-1">{testimonial.name}</p>
@@ -95,20 +113,6 @@ export function Testimonials() {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <p className="text-zinc-500 italic flex items-center justify-center gap-2">
-            <span className="text-2xl">🐶</span>
-            ¿Quieres ser el próximo en transformar tu negocio canino? ¡Hablemos!
-            <span className="text-2xl">🐶</span>
-          </p>
-        </motion.div>
       </div>
     </section>
   );
