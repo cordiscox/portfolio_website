@@ -1,5 +1,5 @@
 ```markdown
-# 🚀 Deploy en AWS EC2 (cv.adiestradorescaninos.online)
+# 🚀 Deploy en AWS EC2 (joaquincordisco.me)
 
 Deploy de un portafolio **Vite/React** en **AWS EC2** usando **Nginx + symlink**, evitando loops internos y garantizando un despliegue limpio.
 
@@ -12,7 +12,7 @@ Deploy de un portafolio **Vite/React** en **AWS EC2** usando **Nginx + symlink**
    - `22/tcp` (SSH)
    - `80/tcp` (HTTP)
    - `443/tcp` (HTTPS)
-3. Configurar DNS: cv.adiestradorescaninos.online → <IP pública de EC2>
+3. Configurar DNS: joaquincordisco.me → <IP pública de EC2>
 
 
 ## 2. 🔐 Acceso por SSH
@@ -88,7 +88,7 @@ portfolio -> /home/ubuntu/portfolio_website/build
 sudo tee /etc/nginx/sites-available/portfolio <<'EOF'
 server {
     listen 80;
-    server_name cv.adiestradorescaninos.online;
+    server_name joaquincordisco.me;
 
     root /var/www/portfolio;
     index index.html;
@@ -123,7 +123,7 @@ sudo snap install core && sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
-sudo certbot --nginx -d cv.adiestradorescaninos.online
+sudo certbot --nginx -d joaquincordisco.me
 ```
 
 Certbot:
