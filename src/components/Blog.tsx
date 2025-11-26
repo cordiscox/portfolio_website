@@ -12,6 +12,7 @@ const articles = [
     image: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&h=500&fit=crop',
     category: 'Tecnología',
     gradient: 'from-[#ff8c42] to-[#e67a35]',
+    alt: 'Entrenadora canina utilizando tablet y clicker junto a un perro',
   },
   {
     title: 'Desarrollo de Apps para el Sector Canino: Guía Completa',
@@ -22,6 +23,7 @@ const articles = [
     image: 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&h=500&fit=crop',
     category: 'Desarrollo',
     gradient: 'from-[#4ecdc4] to-[#38b2ac]',
+    alt: 'Desarrollador diseñando app móvil sobre escritorio con ilustraciones caninas',
   },
   {
     title: 'UX Design para Plataformas de Adiestramiento',
@@ -32,6 +34,7 @@ const articles = [
     image: 'https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=800&h=500&fit=crop',
     category: 'UX/UI',
     gradient: 'from-[#95e1d3] to-[#6dd5c3]',
+    alt: 'Diseñadora revisando wireframes coloridos para plataforma de entrenamiento',
   },
 ];
 
@@ -70,7 +73,10 @@ export function Blog() {
                 <div className="relative h-48 overflow-hidden">
                   <ImageWithFallback
                     src={article.image}
-                    alt={article.title}
+                    alt={article.alt}
+                    width={800}
+                    height={500}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent" />

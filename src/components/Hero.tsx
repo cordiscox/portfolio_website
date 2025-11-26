@@ -23,7 +23,7 @@ export function Hero() {
           >
             <Terminal size={16} className="text-[#4ecdc4]" />
             <span className="text-[0.75rem] uppercase tracking-[0.35em]">
-              DevOps & Automatización | Soporte de Aplicaciones
+              DISPONIBLE PARA NUEVOS DESAFÍOS
             </span>
           </motion.div>
 
@@ -31,26 +31,42 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-6xl md:text-8xl lg:text-9xl mb-6 text-white tracking-tight"
+            className="text-6xl md:text-8xl lg:text-9xl mb-8 text-white tracking-tight leading-[1.05]"
           >
-            Hola, soy{' '}
-            <span className="block mt-2">
+            <span className="block text-white">Llevo tus sistemas al</span>
+            <span className="block">
               <AnimatedGradientText className="font-bold">
-                Joaquin Cordisco
+                siguiente nivel.
               </AnimatedGradientText>
             </span>
           </motion.h1>
 
+
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-wrap items-center justify-center gap-4 mb-12 text-sm md:text-base font-semibold tracking-[0.25em] uppercase text-white"
+          >
+            <span className="px-5 py-2 text-2xl text-[#ff8c42] font-semibold">
+              &lt; DevOps <span className="text-white"> & </span>
+              <span className="block sm:inline">Automation Engineer /&gt; </span>
+            </span>
+            
+            <span className="px-5 py-2 text-2xl text-[#4ecdc4] font-semibold">
+              &lt; Soporte de Aplicaciones /&gt;
+            </span>
+          </motion.h2>
+          
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-3xl text-zinc-400 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
-            Transformo operaciones complejas en flujos eficientes. Unifico la estabilidad del{' '}
-            <span className="text-[#ff8c42] font-semibold">Soporte Crítico</span> con la agilidad de{' '}
-            <span className="text-[#4ecdc4] font-semibold">DevOps</span> y la{' '}
-            <span className="text-[#95e1d3] font-semibold">Automatización</span>.
+            No solo mantengo sistemas funcionando:{' '}
+            <span className="text-[#ff8c42] font-semibold">diseño y automatizo procesos</span>{' '}
+            para que tus aplicaciones sean más estables, tus releases más seguros y tu equipo trabaje con menos urgencias.
           </motion.p>
 
           <motion.div

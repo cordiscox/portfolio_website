@@ -56,7 +56,10 @@ export function About() {
           >
             <ImageWithFallback
               src={Me}
-              alt="Joaquin Cordisco"
+              alt="Retrato profesional de Joaquin Cordisco sonriendo y mirando a cámara"
+              width={1579}
+              height={1536}
+              loading="lazy"
               className="rounded-3xl shadow-2xl shadow-[#ff8c42]/20 w-full border-4 border-[#ff8c42]/20"
             />
           </motion.div>

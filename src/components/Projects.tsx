@@ -12,6 +12,9 @@ type Project = {
   title: string;
   description: string;
   image: string;
+  alt: string;
+  width: number;
+  height: number;
   tech: string[];
   gradient: string;
   github?: string;
@@ -29,6 +32,9 @@ const projects: Project[] = [
         title: 'Bash Automation Scripts',
         description: 'Colección de scripts en Bash para automatizar copia, compresión, envío y recepción de archivos, verificación de duplicados y ejecución genérica de procesos en entornos Linux.',
         image: BasgImg,
+        alt: 'Ventana de terminal Linux mostrando scripts de automatización Bash ejecutándose',
+        width: 2048,
+        height: 1536,
         tech: ['Bash', 'Shell Script', 'Linux', 'Automation'],
         gradient: 'from-[#10b981] to-[#059669]',
         github: 'https://github.com/cordiscox/bash_scripts'
@@ -37,6 +43,9 @@ const projects: Project[] = [
         title: 'Speech-to-Text Tool',
         description: 'Herramienta para convertir audio a texto en tiempo real o por archivo, enfocada en reconocimiento de voz, utilidades de CLI y/o integración con APIs externas.',
         image: SpeechImg,
+        alt: 'Profesional usando auriculares y micrófono frente a una laptop grabando audio para transcribirlo',
+        width: 2048,
+        height: 1536,
         tech: ['Python', 'Speech Recognition', 'Audio Processing', 'CLI'],
         gradient: 'from-[#6366f1] to-[#4f46e5]',
         github: 'https://github.com/cordiscox/SpeechToText'
@@ -45,6 +54,9 @@ const projects: Project[] = [
         title: 'Chatbot RAG Profesional',
         description: 'Asistente IA para recruiters con LangChain y FastAPI. Integra respuestas en streaming, seguridad avanzada y métricas para Prometheus.',
         image: ChatbotImg,
+        alt: 'Interfaz de chatbot con tarjetas de métricas y panel administrativo iluminado en cian',
+        width: 2048,
+        height: 1536,
         tech: ['Python', 'FastAPI', 'LangChain', 'PostgreSQL', 'Docker', 'Prometheus & Grafana', 'hCaptcha'],
         gradient: 'from-[#5b9df6] to-[#7ad7c4]'
     },
@@ -52,6 +64,9 @@ const projects: Project[] = [
         title: 'URL Shortener',
         description: 'Servicio rápido y escalable para acortar URLs, construido con FastAPI y desplegado en AWS mediante Docker, ECS Fargate y Terraform.',
         image: UrlImg,
+        alt: 'Dashboard con gráficas y métricas de un servicio acortador de URLs en tonos azules',
+        width: 2048,
+        height: 1536,
         tech: ['Python','FastAPI', 'Docker', 'Terraform', 'ECS', 'ECR'],
         gradient: 'from-[#ff6b9d] to-[#ee5a8a]',
         github: 'https://github.com/cordiscox/url_shortener'  
@@ -60,6 +75,9 @@ const projects: Project[] = [
         title: 'AutoHotKey Toolkit',
         description: 'Diseñado para acceder rápidamente a comandos de distintas tecnologias, gestionar menús dinámicos, lanzar utilidades del sistema.',
         image: AHKImg,
+        alt: 'Primer plano de teclado mecánico con atajos iluminados y código AutoHotkey en pantalla',
+        width: 1805,
+        height: 1354,
         tech: ['AutoHotkey', 'Tools', 'Productivity'],
         gradient: 'from-[#06b6d4] to-[#0ea5e9]',
         github: 'https://github.com/cordiscox/AutoHotKeys'
@@ -68,6 +86,9 @@ const projects: Project[] = [
         title: 'Entrenadores Caninos',
         description: 'Plataforma Entrenadores Caninos, construido con FastAPI y PostgreSQL/PostGIS.',
         image: dogTrainingImg,
+        alt: 'Entrenadora canina guiando a un perro en un parque al atardecer',
+        width: 2048,
+        height: 1536,
         tech: ['Python', 'FastAPI', 'PostgreSQL', 'Docker', 'Terraform', 'AWS'],
         gradient: 'from-[#f97316] to-[#ea580c]',
         status: 'under construction'
@@ -110,7 +131,10 @@ export function Projects() {
                 <div className="relative h-56 md:h-64 overflow-hidden shrink-0">
                   <ImageWithFallback
                     src={project.image}
-                    alt={project.title}
+                    alt={project.alt}
+                    width={project.width}
+                    height={project.height}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/60 to-transparent" />
