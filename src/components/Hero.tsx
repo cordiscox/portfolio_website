@@ -54,7 +54,8 @@ export function Hero() {
             </span>
             
             <span className="px-5 py-2 text-2xl text-[#4ecdc4] font-semibold">
-              &lt; Soporte de Aplicaciones /&gt;
+              &lt; Soporte de{' '}
+              <span className="block sm:inline">Aplicaciones /&gt;</span> 
             </span>
           </motion.h2>
           

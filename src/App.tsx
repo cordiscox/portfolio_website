@@ -8,6 +8,7 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { GridBackground } from './components/GridBackground';
 import { InfinitePawTrail } from './components/ui/infinite-paw-trail';
+import { ChatWidget } from './components/chat/ChatWidget';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 }
