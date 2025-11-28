@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowUpRight, Lock } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ImageWithFallback } from './ui/ImageWithFallback';
 import SpeechImg from '../../src/assets/speechtotext.jpg';
 import AHKImg from '../../src/assets/autohotkeyimg.jpg';
 import UrlImg from '../../src/assets/urlshortener.jpg';

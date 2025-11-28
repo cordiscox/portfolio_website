@@ -34,9 +34,9 @@ const RATE_WINDOW_MS = 60 * 1000;
 const RATE_LIMIT_STORAGE_KEY = 'chat-widget-rate-limit';
 const urlPattern = /(https?:\/\/|www\.)/i;
 const FREQUENT_QUESTIONS = [
-  '¿Cuál fue tu mayor logro?',
+  '¿Cuéntame sobre ti?',
   '¿Cómo manejas el trabajo en equipo?',
-  '¿Qué esperas del próximo rol y equipo?',
+  '¿Qué hace único tu perfil?',
 ] as const;
 
 const defaultRateLimitSnapshot: RateLimitSnapshot = {

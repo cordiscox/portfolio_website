@@ -6,7 +6,7 @@ import { Skills } from './components/Skills';
 import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { GridBackground } from './components/GridBackground';
+import { GridBackground } from './components/ui/GridBackground';
 import { InfinitePawTrail } from './components/ui/infinite-paw-trail';
 import { ChatWidget } from './components/chat/ChatWidget';
 

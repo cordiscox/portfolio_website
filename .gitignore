@@ -23,3 +23,8 @@ yarn-error.log*
 
 # Other artifacts
 *.zip
+
+# Sections that we do not use
+src/components/Blog.tsx
+
+

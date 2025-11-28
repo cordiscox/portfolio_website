@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Calendar, Clock, ArrowUpRight } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ImageWithFallback } from './ui/ImageWithFallback';
 
 const articles = [
   {
