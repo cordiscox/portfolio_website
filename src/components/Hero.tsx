@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Github, Linkedin, Mail, Terminal } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { AnimatedGradientText } from './ui/animated-gradient-text';
 
 export function Hero() {
@@ -13,20 +13,6 @@ export function Hero() {
           transition={{ duration: 1 }}
           className="text-center"
         >
-          {/* Badge o Etiqueta superior */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[#4ecdc4]/60 bg-black/90 text-[#4ecdc4] mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
-            style={{ fontFamily: '"Fira Code", "Courier New", monospace' }}
-          >
-            <Terminal size={16} className="text-[#4ecdc4]" />
-            <span className="text-[0.75rem] uppercase tracking-[0.35em]">
-              DISPONIBLE PARA NUEVOS DESAFÍOS
-            </span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
