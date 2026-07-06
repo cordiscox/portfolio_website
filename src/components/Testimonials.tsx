@@ -23,10 +23,9 @@ const testimonials = [
     gradient: 'from-[#4ecdc4] to-[#38b2ac]',
   },
   {
-    name: 'Agustín Zapata',
-    role: 'SAP ABAP Developer',
-    content:
-      'Joaquin es gran compañero, altamente resolutivo y capaz de realizar las tareas que el puesto requiere e ir más allá, siempre pensando en ayudar a los demas y en conseguir la solución mas escalable posible al tema presente.',
+    name: 'Martín Cimino',
+    role: 'SAP Basis Team Leader en Atos',
+    content: 'Tuve la suerte de haber conocido a Joaquín trabajando en ATOS, donde formaba parte de nuestro equipo de proyectos para el área de Analista Técnico, Admin Unix/Linux y Soporte SAP Basis. Durante ese tiempo en nuestro equipo, Joaquín demostró ser un profesional altamente capacitado y dedicado, con una gran pasión por la resolución de problemas y fue fundamental para el éxito de nuestros proyectos...',
     rating: 5,
     avatar: '👊',
     gradient: 'from-[#95e1d3] to-[#6dd5c3]',
@@ -44,15 +43,15 @@ export function Testimonials() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          
+
           <h2 className="text-5xl md:text-7xl mb-6 text-white font-bold">
             Feedback & <span className="text-[#ff8c42]">Trayectoria</span>
           </h2>
-          
+
           <div className="w-24 h-1 bg-gradient-to-r from-[#ff8c42] to-[#4ecdc4] mx-auto rounded-full mb-6" />
-          
+
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Lo que dicen mis colegas y compañeros de equipo en 
+            Lo que dicen mis colegas y compañeros de equipo en
             <span className="text-[#0077b5] font-semibold"> LinkedIn</span>.
           </p>
         </motion.div>

@@ -1,12 +1,9 @@
 import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowUpRight, Lock } from 'lucide-react';
 import { ImageWithFallback } from './ui/ImageWithFallback';
-import SpeechImg from '../../src/assets/speechtotext.jpg';
 import AHKImg from '../../src/assets/autohotkeyimg.jpg';
-import UrlImg from '../../src/assets/urlshortener.jpg';
 import BasgImg from '../../src/assets/bashscripts.jpg';
 import dogTrainingImg from '../../src/assets/dogtraining.jpg';
-import ChatbotImg from '../../src/assets/chatbot.jpg';
 
 type Project = {
   title: string;
@@ -28,77 +25,44 @@ const hasDemo = (project: Project) => Boolean(project.demo);
 const hasLinks = (project: Project) => hasGithub(project) || hasDemo(project);
 
 const projects: Project[] = [
-    {
-        title: 'Bash Automation Scripts',
-        description: 'Colección de scripts en Bash para automatizar copia, compresión, envío y recepción de archivos, verificación de duplicados y ejecución genérica de procesos en entornos Linux.',
-        image: BasgImg,
-        alt: 'Ventana de terminal Linux mostrando scripts de automatización Bash ejecutándose',
-        width: 2048,
-        height: 1536,
-        tech: ['Bash', 'Shell Script', 'Linux', 'Automation'],
-        gradient: 'from-[#10b981] to-[#059669]',
-        github: 'https://github.com/cordiscox/bash_scripts'
-    },
-    {
-        title: 'Speech-to-Text Tool',
-        description: 'Herramienta para convertir audio a texto en tiempo real o por archivo, enfocada en reconocimiento de voz, utilidades de CLI y/o integración con APIs externas.',
-        image: SpeechImg,
-        alt: 'Profesional usando auriculares y micrófono frente a una laptop grabando audio para transcribirlo',
-        width: 2048,
-        height: 1536,
-        tech: ['Python', 'Speech Recognition', 'Audio Processing', 'CLI'],
-        gradient: 'from-[#6366f1] to-[#4f46e5]',
-        github: 'https://github.com/cordiscox/SpeechToText'
-    },
-    {
-        title: 'Chatbot RAG Profesional',
-        description: 'Asistente IA para recruiters con LangChain y FastAPI. Integra respuestas en streaming, seguridad avanzada y métricas para Prometheus.',
-        image: ChatbotImg,
-        alt: 'Interfaz de chatbot con tarjetas de métricas y panel administrativo iluminado en cian',
-        width: 2048,
-        height: 1536,
-        tech: ['Python', 'FastAPI', 'LangChain', 'PostgreSQL', 'Docker', 'Prometheus & Grafana', 'hCaptcha'],
-        gradient: 'from-[#5b9df6] to-[#7ad7c4]'
-    },
-    {
-        title: 'URL Shortener',
-        description: 'Servicio rápido y escalable para acortar URLs, construido con FastAPI y desplegado en AWS mediante Docker, ECS Fargate y Terraform.',
-        image: UrlImg,
-        alt: 'Dashboard con gráficas y métricas de un servicio acortador de URLs en tonos azules',
-        width: 2048,
-        height: 1536,
-        tech: ['Python','FastAPI', 'Docker', 'Terraform', 'ECS', 'ECR'],
-        gradient: 'from-[#ff6b9d] to-[#ee5a8a]',
-        github: 'https://github.com/cordiscox/url_shortener'  
-    },
-    {
-        title: 'AutoHotKey Toolkit',
-        description: 'Diseñado para acceder rápidamente a comandos de distintas tecnologias, gestionar menús dinámicos, lanzar utilidades del sistema.',
-        image: AHKImg,
-        alt: 'Primer plano de teclado mecánico con atajos iluminados y código AutoHotkey en pantalla',
-        width: 1805,
-        height: 1354,
-        tech: ['AutoHotkey', 'Tools', 'Productivity'],
-        gradient: 'from-[#06b6d4] to-[#0ea5e9]',
-        github: 'https://github.com/cordiscox/AutoHotKeys'
-    },
-    {
-        title: 'Entrenadores Caninos',
-        description: 'Plataforma Entrenadores Caninos, construido con FastAPI y PostgreSQL/PostGIS.',
-        image: dogTrainingImg,
-        alt: 'Entrenadora canina guiando a un perro en un parque al atardecer',
-        width: 2048,
-        height: 1536,
-        tech: ['Python', 'FastAPI', 'PostgreSQL', 'Docker', 'Terraform', 'AWS'],
-        gradient: 'from-[#f97316] to-[#ea580c]',
-        status: 'under construction'
-    },
+  {
+    title: 'Bash Scripts',
+    description: 'Colección de scripts en Bash para automatizar copia, compresión, envío y recepción de archivos, verificación de duplicados y ejecución genérica de procesos en entornos Linux.',
+    image: BasgImg,
+    alt: 'Ventana de terminal Linux mostrando scripts de automatización Bash ejecutándose',
+    width: 2048,
+    height: 1536,
+    tech: ['Bash', 'Shell Script', 'Linux', 'Automation'],
+    gradient: 'from-[#10b981] to-[#059669]',
+    github: 'https://github.com/cordiscox/bash_scripts'
+  },
+  {
+    title: 'AutoHotKey Toolkit',
+    description: 'Una paleta de comandos y menús rápidos en AutoHotkey para ejecutar, copiar y aprender comandos frecuentes de Git, Docker, Kubernetes, Linux, Nginx y PostgreSQL.',
+    image: AHKImg,
+    alt: 'Primer plano de teclado mecánico con atajos iluminados y código AutoHotkey en pantalla',
+    width: 1805,
+    height: 1354,
+    tech: ['AutoHotkey', 'Tools', 'Productivity'],
+    gradient: 'from-[#06b6d4] to-[#0ea5e9]',
+    github: 'https://github.com/cordiscox/AutoHotKeys'
+  },
+  {
+    title: 'CanineAI',
+    description: 'CanineAI es una plataforma basada en IA para el adiestramiento y entrenamiento de perros, diseñada para ayudar a los usuarios con orientación personalizada. Aprovecha los LLM, RAG y IA para brindar consejos precisos y específicos para este ámbito.',
+    image: dogTrainingImg,
+    alt: 'Entrenadora canina guiando a un perro en un parque',
+    width: 2048,
+    height: 1536,
+    tech: ['React', 'FastAPI', 'LangChain', 'PostgreSQL', 'AWS', 'Terraform'],
+    gradient: 'from-[#f97316] to-[#ea580c]'
+  },
 ];
 
 export function Projects() {
   return (
     <section id="projects" className="relative py-20 px-6">
-      
+
       <div className="mx-auto max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -138,7 +102,7 @@ export function Projects() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/70 via-zinc-900/30 to-transparent" />
-                  
+
                   {/* Construction overlay */}
                   {isUnderConstruction(project) && (
                     <div className="absolute inset-0 bg-zinc-950/70 backdrop-blur-[2px] flex items-center justify-center">
@@ -148,11 +112,11 @@ export function Projects() {
                       </div>
                     </div>
                   )}
-                  
+
                   {/* Floating buttons */}
                   {!isUnderConstruction(project) && hasLinks(project) && (
                     <div className="absolute top-4 right-4 flex gap-2 z-10"> {/* Añadido z-10 y quitada la animación de opacidad en móvil para mejorar UX táctil si se desea, o dejarla igual */}
-                       <div className="flex gap-2 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 md:translate-y-2 md:group-hover:translate-y-0">
+                      <div className="flex gap-2 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 md:translate-y-2 md:group-hover:translate-y-0">
                         {hasGithub(project) && (
                           <a
                             href={project.github}
@@ -200,7 +164,7 @@ export function Projects() {
                       <ArrowUpRight className="text-zinc-600 group-hover:text-[#ff8c42] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all shrink-0" size={20} />
                     )}
                   </div>
-                  
+
                   <p className="text-zinc-400 mb-6 leading-relaxed text-sm md:text-base flex-grow">
                     {project.description}
                   </p>

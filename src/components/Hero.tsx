@@ -5,7 +5,7 @@ import { AnimatedGradientText } from './ui/animated-gradient-text';
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
-      
+
       <div className="mx-auto max-w-6xl w-full relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
@@ -38,13 +38,8 @@ export function Hero() {
               &lt; DevOps <span className="text-white"> & </span>
               <span className="block sm:inline">Automation Engineer /&gt; </span>
             </span>
-            
-            <span className="px-5 py-2 text-2xl text-[#4ecdc4] font-semibold">
-              &lt; Soporte de{' '}
-              <span className="block sm:inline">Aplicaciones /&gt;</span> 
-            </span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -110,7 +105,7 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
-      
+
       {/* Gradient line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#ff8c42] to-transparent opacity-30" />
     </section>

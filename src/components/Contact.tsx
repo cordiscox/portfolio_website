@@ -1,7 +1,12 @@
 import { motion } from 'motion/react';
-import { Mail, MapPin, Send, Linkedin, Github, Twitter, Download, Phone } from 'lucide-react';
+import { Mail, Send, Linkedin, Github, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+
+const whatsappUrl = 'https://wa.me/543364628631';
+const whatsappQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=12&data=${encodeURIComponent(
+  whatsappUrl
+)}`;
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -134,29 +139,33 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* ITEM 2: TELÉFONO */}
-              <div className="flex items-start gap-4 p-5 bg-zinc-900/50 border-2 border-zinc-800 rounded-2xl hover:border-[#4ecdc4]/30 transition-colors backdrop-blur-sm">
-                <div className="p-3 bg-gradient-to-br from-[#4ecdc4] to-[#2cb67d] rounded-xl shadow-lg">
-                  <Phone size={20} className="text-white" />
+              {/* ITEM 2: WHATSAPP */}
+              <div className="p-4 bg-zinc-900/50 border-2 border-zinc-800 rounded-2xl hover:border-[#4ecdc4]/30 transition-colors backdrop-blur-sm">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 bg-gradient-to-br from-[#4ecdc4] to-[#2cb67d] rounded-xl shadow-lg">
+                    <MessageCircle size={20} className="text-white" />
+                  </div>
+                  <p className="text-white font-medium">WhatsApp</p>
                 </div>
-                <div>
-                  <p className="text-white mb-1 font-medium">Teléfono</p>
-                  <p className="text-zinc-400 hover:text-[#4ecdc4] transition-colors cursor-default">
-                    +54 (336) 4628631
-                  </p>
-                </div>
-              </div>
-
-              {/* ITEM 3: UBICACIÓN */}
-              <div className="flex items-start gap-4 p-5 bg-zinc-900/50 border-2 border-zinc-800 rounded-2xl hover:border-[#4ecdc4]/30 transition-colors backdrop-blur-sm">
-                <div className="p-3 bg-gradient-to-br from-[#4ecdc4] to-[#2cb67d] rounded-xl shadow-lg">
-                  <MapPin size={20} className="text-white" />
-                </div>
-                <div>
-                  <p className="text-white mb-1 font-medium">Ubicación</p>
-                  <p className="text-zinc-400 hover:text-[#4ecdc4] transition-colors cursor-default">
-                    Buenos Aires, Argentina
-                  </p>
+                <div className="flex flex-col">
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-300 text-center"
+                  >
+                    Escribime
+                  </a>
+                  <div className="justify-center inline-flex rounded-2xl bg-white p-3 shadow-lg shadow-black/20">
+                    <img
+                      src={whatsappQrUrl}
+                      alt="QR para abrir WhatsApp"
+                      width={180}
+                      height={180}
+                      loading="lazy"
+                      className="h-36 w-36 sm:h-44 sm:w-44"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
