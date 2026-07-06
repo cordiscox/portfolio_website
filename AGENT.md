@@ -34,8 +34,3 @@
 - UI helper: Radix + shadcn components en `src/components/ui` y `class-variance-authority`/`tailwind-merge` para variantes (aunque hoy no se importan en `App`).
 - Tooling: Vite + plugin `@vitejs/plugin-react-swc`; aliases en `vite.config.ts` fijan versiones para evitar duplicados (ej. `@radix-ui/react-*`, `lucide-react@0.487.0`).
 
-## Notas y pendientes para futuros agentes
-- El contenido principal ya está adaptado al CV de Joaquín; si cambia la información, actualizar arrays de datos (`projects`, `caseStudies`, `skillCategories`, etc.) y enlaces en `Hero`/`Contact`.
-- El formulario sigue sin backend; conectar con un servicio de correo o endpoint y añadir manejo de éxito/error.
-- Mantener IDs de sección si se agregan nuevas anclas para no romper la navegación del header y los CTAs.
-- No hay tests ni configuración de lint/report; considerar añadirlos si se extiende el proyecto.
