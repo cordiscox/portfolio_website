@@ -7,7 +7,6 @@ import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { GridBackground } from './components/ui/GridBackground';
-import { InfinitePawTrail } from './components/ui/infinite-paw-trail';
 
 export default function App() {
   return (
