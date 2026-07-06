@@ -1,6 +1,5 @@
 # Dependencies and caches
 node_modules/
-package-lock.json
 pnpm-lock.yaml
 yarn.lock
 **/.vite/
@@ -12,6 +11,21 @@ dist/
 # Environment and local config
 .env
 .env.*
+terraform.tfvars
+*.tfvars
+!terraform.tfvars.example
+backend.hcl
+*.tfstate
+*.tfstate.*
+**/.terraform/
+*.tfplan
+*.plan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
 .vscode/
 .idea/
 .DS_Store
@@ -26,5 +40,3 @@ yarn-error.log*
 
 # Sections that we do not use
 src/components/Blog.tsx
-
-

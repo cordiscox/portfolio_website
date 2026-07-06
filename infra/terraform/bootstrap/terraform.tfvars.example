@@ -1,0 +1,10 @@
+aws_region        = "us-east-1"
+project_name      = "portfolio-website"
+state_bucket_name = null
+force_destroy     = false
+
+tags = {
+  Project     = "portfolio-website"
+  Environment = "prod"
+  ManagedBy   = "terraform"
+}

@@ -1,0 +1,8 @@
+aws_region  = "us-east-1"
+domain_name = "joaquincordisco.me"
+
+tags = {
+  Project     = "portfolio-website"
+  Environment = "prod"
+  ManagedBy   = "terraform"
+}

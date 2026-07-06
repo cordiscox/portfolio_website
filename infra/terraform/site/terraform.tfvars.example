@@ -1,0 +1,21 @@
+aws_region = "us-east-1"
+
+domain_name            = "joaquincordisco.me"
+alternate_domain_names = ["www.joaquincordisco.me"]
+hosted_zone_id         = "REPLACE_WITH_DNS_STACK_HOSTED_ZONE_ID"
+site_bucket_name       = null
+
+github_owner  = "cordiscox"
+github_repo   = "portfolio_website"
+github_branch = "main"
+
+create_github_oidc_provider     = false
+manage_github_actions_variables = false
+
+price_class = "PriceClass_100"
+
+tags = {
+  Project     = "portfolio-website"
+  Environment = "prod"
+  ManagedBy   = "terraform"
+}
